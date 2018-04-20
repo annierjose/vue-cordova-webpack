@@ -1,0 +1,23 @@
+<div class="menu">
+  <v-ons-splitter>
+    <v-ons-splitter-side
+      swipeable width="150px" collapse="" side="left"
+      :open.sync="openSide">
+      <v-ons-page>
+        <v-ons-list>
+          <v-ons-list-item v-for="page in pages"
+            tappable modifier="chevron"
+            @click="menuItemAction(page)"
+            :key="page">
+            <div class="center">{{ page }}</div>
+          </v-ons-list-item>
+        </v-ons-list>
+      </v-ons-page>
+    </v-ons-splitter-side>
+
+    <v-ons-splitter-content>
+      <router-view :key="$route.fullPath">loading...</router-view>
+    </v-ons-splitter-content>
+
+  </v-ons-splitter>
+</div>
