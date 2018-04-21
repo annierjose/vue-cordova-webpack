@@ -11,7 +11,7 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {},
-
+    headers: { 'Access-Control-Allow-Origin': '*' },
     // Various Dev Server settings
     disableHostCheck: true,
     host: '0.0.0.0', // can be overwritten by process.env.HOST
